@@ -6,15 +6,15 @@ export default function Hooks() {
 
   //componentDidMount and componentDidUpdate
   //it will fired on mount and update when state is updated
-  useEffect(() => {
-    console.log(' fired on mount and update');
-  });
+  // useEffect(() => {
+  //   console.log(' fired on mount and update');
+  // });
 
-  //componentDidMount
-  //it will fired only on mounting
-  useEffect(() => {
-    console.log('fired only on mounting');
-  }, []);
+  // //componentDidMount
+  // //it will fired only on mounting
+  // useEffect(() => {
+  //   console.log('fired only on mounting');
+  // }, []);
 
   //componentDidUpdate
   //it will fired only on update
