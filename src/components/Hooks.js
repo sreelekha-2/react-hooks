@@ -16,6 +16,10 @@ export default function Hooks() {
     console.log('fired only on mounting');
   }, []);
 
+  // useEffect(() => {
+  //   console.log('fired only on mounting and count is updated');
+  // }, [count]);
+
   //componentDidUpdate
   //it will fired only on update
   useEffect(() => {
