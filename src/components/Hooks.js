@@ -6,15 +6,15 @@ export default function Hooks() {
 
   //componentDidMount and componentDidUpdate
   //it will fired on mount and update when state is updated
-  // useEffect(() => {
-  //   console.log(' fired on mount and update');
-  // });
+  useEffect(() => {
+    console.log(' fired on mount and update');
+  });
 
   // //componentDidMount
   // //it will fired only on mounting
-  // useEffect(() => {
-  //   console.log('fired only on mounting');
-  // }, []);
+  useEffect(() => {
+    console.log('fired only on mounting');
+  }, []);
 
   //componentDidUpdate
   //it will fired only on update
@@ -28,11 +28,11 @@ export default function Hooks() {
 
   //componentWillUnmount and componentDidUpdate
   //it will fired when component unmounted means removed and updated
-  // useEffect(() => {
-  //   return function () {
-  //     console.log('fired unmounted and updated');
-  //   };
-  // });
+  useEffect(() => {
+    return function () {
+      console.log('fired unmounted and updated');
+    };
+  });
 
   //componentWillUnmount
   //it will fired when component unmounted means removed
