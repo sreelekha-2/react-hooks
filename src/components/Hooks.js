@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Hooks() {
   const [count, setCount] = useState(0);
+  const isUpdate = useRef(false);
 
   //componentDidMount and componentDidUpdate
   //it will fired on mount and update when state is updated
@@ -18,8 +19,12 @@ export default function Hooks() {
   //componentDidUpdate
   //it will fired only on update
   useEffect(() => {
-    console.log('fired only on update');
-  }, [count]);
+    if (isUpdate.current) {
+      console.log('fired only on update');
+    } else {
+      isUpdate.current = true;
+    }
+  });
 
   //componentWillUnmount and componentDidUpdate
   //it will fired when component unmounted means removed and updated
